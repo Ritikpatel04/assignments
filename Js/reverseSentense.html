@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> reverse every word in given sentence. </title>
+
+<style>
+
+body{
+text-align:center ;
+
+}
+</style>
+
+</head>
+<body>
+
+<h2 > reversed the words of a given sentense. </h2>
+<p> see the output into <i>console of browser.</i> <p>
+
+</body>
+
+<script>
+
+const input=prompt("Enter your sentence");
+
+console.log("sentense before reversed");
+console.log(input);
+
+
+function revWordsSentense(sentense){
+
+ const words=sentense.split(' ');
+
+const revWords=words.map((word)=>{
+
+const char = word.split('');  
+ const revChar= char.reverse(); 
+ const revWord = revChar.join(''); 
+
+  return revWord;
+});
+
+ const revSentense= revWords.join(' ');
+return revSentense;
+
+}
+
+
+
+const revSentense = revWordsSentense(input);
+
+console.log("sentense after reversed.");
+console.log(revSentense); 
+
+
+</script>
+
+</html>

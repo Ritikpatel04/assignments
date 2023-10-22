@@ -1,0 +1,48 @@
+
+
+<html>
+<head>
+<title> sort the array in dsec. order</title>
+<style>
+body{
+text-align:center ;
+
+}
+</style>
+</head>
+
+<body>
+
+<h2 > reversed the array in  descending order. </h2>
+<p> see the output into <i>console of browser.</i> <p>
+
+
+<script>
+function  sortArray(arr) {
+
+  const n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+
+      if (arr[j] < arr[j + 1]) {
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+
+    }
+  }
+
+}
+
+const originalArray = [5, 2, 9, 1, 5, 6];
+
+sortArray(originalArray);
+
+console.log("Array after sorting:", originalArray);
+
+</script>
+</body>
+
+</html>
